@@ -11,7 +11,6 @@
 export const BELTS = [
   "Undisputed WWE Champion",
   "World Heavyweight Champion",
-  "WWE Women’s Champion",
   "Intercontinental Champion",
   "United States Champion",
   "World Tag Team Champions",
