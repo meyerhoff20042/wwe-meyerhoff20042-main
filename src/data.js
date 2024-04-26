@@ -16,6 +16,7 @@ export const BELTS = [
   "World Tag Team Champions",
   "SmackDown Tag Team Champions",
   "WWE Women's Tag Team Champions",
+  "Vacant Title",
   "NXT Champion",
   "NXT Women's Champion",
   "NXT North American Champion",

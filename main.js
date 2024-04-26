@@ -1,3 +1,5 @@
-import { BELTS, CHAMPIONS } from "./src/data";
+import { BELTS } from "./src/data";
 
-console.log(BELTS, CHAMPIONS);
+const beltsWithoutVacant = BELTS.filter((belts) => belts !== "Vacant Title");
+
+console.log(beltsWithoutVacant);
