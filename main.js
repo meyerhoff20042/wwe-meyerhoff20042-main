@@ -1,12 +1,7 @@
-import { BELTS, CHAMPIONS } from "./src/data";
-import { removeCorrespondingItemsByTerm } from "./src/lib";
+import { BELTS } from "./src/data";
 
-const inputObject = {
-  terms1: BELTS,
-  terms2: CHAMPIONS,
-  filterTerm: "Tag Team Champions",
-};
+const beltsWithoutVacant = BELTS.filter(
+  (belts) => !belts.includes("Vacant Title"),
+);
 
-const individualChampions = removeCorrespondingItemsByTerm(inputObject);
-
-console.log(individualChampions);
+console.log(beltsWithoutVacant);
