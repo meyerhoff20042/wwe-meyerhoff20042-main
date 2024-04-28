@@ -41,3 +41,36 @@ export function removeCorrespondingItemsByTerm({ terms1, terms2, filterTerm }) {
     { terms1: [], terms2: [] },
   );
 }
+
+/**
+ * @typedef {Object} sortByName
+ * @property {string[]} elements
+ * @property {string} sortBy
+ */
+
+/**
+ *
+ * @param {sortByName} args
+ * @return {Array}
+ */
+
+// Sort elements in an array by first or last name
+export function sortByName({ elements, sortBy = "last" }) {
+  if (sortBy === "first") {
+    return elements.sort((a, b) => {
+      // Split first and last names of each element
+      // and sort by first name
+      const [firstNameA, lastNameA] = a.split(" ");
+      const [firstNameB, lastNameB] = b.split(" ");
+      return firstNameA.localeCompare(firstNameB);
+    });
+  } else {
+    return elements.sort((a, b) => {
+      // Split first and last names of each element
+      // and sort by last name
+      const [firstNameA, lastNameA] = a.split(" ");
+      const [firstNameB, lastNameB] = b.split(" ");
+      return lastNameA.localeCompare(lastNameB);
+    });
+  }
+}
