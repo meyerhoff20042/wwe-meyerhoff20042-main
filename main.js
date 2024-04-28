@@ -9,4 +9,10 @@ const inputObject = {
 
 const individualChampions = removeCorrespondingItemsByTerm(inputObject);
 
+console.log("Individual Champions");
 console.log(individualChampions);
+
+console.log("Alphabetized Champions");
+const sortedChampions = CHAMPIONS.toSorted();
+
+console.log(sortedChampions);
