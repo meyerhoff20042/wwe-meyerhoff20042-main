@@ -43,19 +43,14 @@ export function removeCorrespondingItemsByTerm({ terms1, terms2, filterTerm }) {
 }
 
 /**
- * @typedef {Object} sortByName
- * @property {string[]} elements
- * @property {string} sortBy
- */
-
-/**
- *
- * @param {sortByName} args
- * @return {Array}
+ * @param {Object} args
+ * @param {string[]}
+ * @param {string} [args.sortBy="last"]
+ * @returns {string[]}
  */
 
 // Sort elements in an array by first or last name
-export function sortByName({ elements, sortBy = "last" }) {
+export function sortByName({ elements = [], sortBy = "last" }) {
   if (sortBy === "first") {
     return elements.sort((a, b) => {
       // Split first and last names of each element
