@@ -16,3 +16,12 @@ console.log("Alphabetized Champions");
 const sortedChampions = CHAMPIONS.toSorted();
 
 console.log(sortedChampions);
+
+console.log("CHAMPIONSHIPS array");
+
+const TITLEHOLDERS = {
+  title: BELTS,
+  holder: CHAMPIONS,
+};
+
+console.log(TITLEHOLDERS);
