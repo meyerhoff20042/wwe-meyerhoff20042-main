@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { removeCorrespondingItemsByTerm, sortByName } from "./lib";
+import { removeCorrespondingItemsByTerm, sortByName, getLastName } from "./lib";
 
 test("removeCorrespondingItemsByTerm", () => {
   // Arrange
@@ -30,4 +30,18 @@ test("sortByFirstName", () => {
   const sortedElements = sortByName(args);
 
   expect(sortedElements).toEqual(["Jane Smith", "John Doe", "Ralph Johnson"]);
+});
+
+describe("getLastName", () => {
+  test("returns the last name from a full name", () => {
+    // Arrange
+    const fullName = "John Doe";
+    const expected = "Doe";
+
+    // Act
+    const result = getLastName(fullName);
+
+    // Assert
+    expect(result).toBe(expected);
+  });
 });
