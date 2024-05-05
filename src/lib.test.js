@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { removeCorrespondingItemsByTerm, sortByName, getLastName } from "./lib";
+import { getLastName, removeCorrespondingItemsByTerm, sortByName } from "./lib";
 
 test("removeCorrespondingItemsByTerm", () => {
   // Arrange
@@ -85,6 +85,18 @@ describe("getLastName", () => {
     // Arrange
     const fullName = "John Michael Doe";
     const expected = "Doe";
+
+    // Act
+    const result = getLastName(fullName);
+
+    // Assert
+    expect(result).toBe(expected);
+  });
+
+  test("returns the last name from a full name with special characters", () => {
+    // Arrange
+    const fullName = "Starsky & Hutch";
+    const expected = "Hutch";
 
     // Act
     const result = getLastName(fullName);
