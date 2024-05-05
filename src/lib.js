@@ -76,5 +76,15 @@ export function getLastName(fullName) {
 }
 
 export function merge2ArraysIntoAnArrayOfObjects({ a1, a2, key1, key2 }) {
-  return null;
+  return a1.reduce((acc, item, index) => {
+    const accumulatedResults2Modify = [...acc];
+
+    return [
+      ...accumulatedResults2Modify,
+      {
+        [key1]: item,
+        [key2]: a2[index],
+      },
+    ];
+  }, []);
 }
