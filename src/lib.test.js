@@ -56,4 +56,16 @@ describe("getLastName", () => {
     // Assert
     expect(result).toBe(expected);
   });
+
+  test("returns the last name from a multi-word full name", () => {
+    // Arrange
+    const fullName = "John Michael Doe";
+    const expected = "Doe";
+
+    // Act
+    const result = getLastName(fullName);
+
+    // Assert
+    expect(result).toBe(expected);
+  });
 });
