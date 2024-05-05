@@ -75,4 +75,6 @@ export function getLastName(fullName) {
   return splitName[splitName.length - 1];
 }
 
-export function merge2ArraysIntoAnArrayOfObjects({ a1, a2, key1, key2 }) {}
+export function merge2ArraysIntoAnArrayOfObjects({ a1, a2, key1, key2 }) {
+  return null;
+}

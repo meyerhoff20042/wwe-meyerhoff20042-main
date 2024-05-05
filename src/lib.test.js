@@ -1,5 +1,10 @@
 import { expect, test } from "vitest";
-import { getLastName, removeCorrespondingItemsByTerm, sortByName } from "./lib";
+import {
+  getLastName,
+  removeCorrespondingItemsByTerm,
+  sortByName,
+  merge2ArraysIntoAnArrayOfObjects,
+} from "./lib";
 
 test("removeCorrespondingItemsByTerm", () => {
   // Arrange
